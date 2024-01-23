@@ -13,4 +13,4 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 8080
 
-ENTRYPOINT streamlit run app.py --server.address=0.0.0.0 --server.port=8080
+ENTRYPOINT streamlit run web.py --server.address=0.0.0.0 --server.port=8080
