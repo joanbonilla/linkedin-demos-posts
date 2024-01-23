@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/* \
-    && apt-get install -y libsm6 libxext6 libxrender-dev
+    && apt-get install -y libgl1
 
 COPY . .
 RUN pip install --upgrade pip && pip install opencv-python && pip install -r requirements.txt
