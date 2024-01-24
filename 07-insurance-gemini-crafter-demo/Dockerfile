@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/* 
 
-RUN apt-get update && apt-get install libgl1
+RUN apt-get update && apt-get install -y python3-opencv
+RUN pip install opencv-python
 
 COPY . .
-RUN pip install --upgrade pip && pip install opencv-python && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 EXPOSE 8080
 
